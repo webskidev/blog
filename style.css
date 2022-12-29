@@ -1,0 +1,24 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --font-color-primary: #0D0D0D;
+  --color-primary: #44AA71;
+}
+
+html {
+  font-family: 'Inter', sans-serif;
+  color: var(--font-color-primary);
+}
+
+a {
+  text-decoration: none;
+  color: var(--font-color-primary);
+}
+
+a:hover {
+  color: var(--color-primary);
+}

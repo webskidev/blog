@@ -5,7 +5,8 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "generate": "node generate-posts"
+    "generate": "node generate-posts",
+    "generate-main": "node generate-main"
   },
   "repository": {
     "type": "git",
