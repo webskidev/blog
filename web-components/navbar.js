@@ -1,6 +1,7 @@
 const template = document.createElement('template');
 
-template.innerHTML = `
+
+template.innerHTML = /* html */`
   <style>
     a {
       text-decoration: none;
@@ -11,19 +12,38 @@ template.innerHTML = `
       color: var(--color-primary);
     }
 
+    .logo {
+      font-weight: 700;
+    }
+
     .navbar {
+      display: grid;
+      grid-auto-columns: 1fr;
+      grid-auto-flow: column;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 4.8rem;
+      border-bottom: 1px solid var(--color-light-gray);
+      background: var(--color-background);
+      position: sticky;
+      top: 0;
+    }
+
+    .nav-links {
+      list-style-type: none;
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      gap: 2.4rem;
     }
+
   </style>
 
   <header class="navbar">
-    <a href="#">webskydev</a>
+    <a href="#" class="logo">webskydev</a>
     <nav>
-      <ul>
-        <li>Blog</li>
-        <li>O mnie</li>
+      <ul class="nav-links">
+        <li><a href="">blog</a></li>
+        <li><a href="">about me</a></li>
       </ul>
     </nav>
   </header>

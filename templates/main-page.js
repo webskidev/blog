@@ -11,7 +11,8 @@ const getPostsCardsFromMetadata = (postsMetadata) => {
 }
 
 const renderMainPageTemplate = (postsMetadata) => {
-  return `<!DOCTYPE html>
+  return /* html */ `
+      <!DOCTYPE html>
       <html lang="en">
       
       <head>
@@ -26,11 +27,20 @@ const renderMainPageTemplate = (postsMetadata) => {
       <body>
         <blog-navbar></blog-navbar>
       
-        <h1>My Blog</h1>
-
-        <section>
-          ${getPostsCardsFromMetadata(postsMetadata)}
+        <section class="hero">
+          <div class="hero-details">
+            <h1 class="hero-title">hello, websky dev 👋</h1>
+            <p class="hero-description">My name is Piotr and I’m frontend developer. This is a place where I share some of my code, ideas and other stuff.</p>
+            <blog-button>Check it out</blog-button>
+          </div>
+            <img class="hero-image" src="./assets/blobs.png" alt="hero image" srcset="">
         </section>
+      
+        
+        <main id="main">
+          <h2>Recent posts</h2>
+          ${getPostsCardsFromMetadata(postsMetadata)}
+        </main>
       
         <blog-footer></blog-footer>
         <script src="./index.js" type="module"></script>
