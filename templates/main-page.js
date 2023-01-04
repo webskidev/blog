@@ -1,11 +1,13 @@
 const getPostsCardsFromMetadata = (postsMetadata) => {
-  return postsMetadata.reduce((html, postMetadata) => {
-    return html += (`<div>
-      <div>${postMetadata.emoji}</div>
-      <h3>${postMetadata.title}</h3>
-      <span>${postMetadata.submissionDate}</span>
-      <p>${postMetadata.description}</p>
-    </div>`)
+  return postsMetadata.reduce((html, { title, submissionDate, description }) => {
+    return html += (/* html */`
+      <article class="post-card">
+        <img class="post-image" src="https://picsum.photos/400" alt="" srcset="">
+        <h3><a href="#" class="post-title">${title}</a></h3>
+        <span class="post-date">${submissionDate}</span>
+        <p class="post-description">${description}</p>
+      </article>
+      `)
   }, ''
   )
 }
@@ -29,7 +31,7 @@ const renderMainPageTemplate = (postsMetadata) => {
       
         <section class="hero">
           <div class="hero-details">
-            <h1 class="hero-title">hello, websky dev 👋</h1>
+            <h1 class="hero-title">web up to the sky 🚀</h1>
             <p class="hero-description">My name is Piotr and I’m frontend developer. This is a place where I share some of my code, ideas and other stuff.</p>
             <blog-button>Check it out</blog-button>
           </div>
@@ -38,8 +40,12 @@ const renderMainPageTemplate = (postsMetadata) => {
       
         
         <main id="main">
-          <h2>Recent posts</h2>
-          ${getPostsCardsFromMetadata(postsMetadata)}
+          <section class="posts">
+            <h2 class="posts-header">Recent posts</h2>
+            <div class="posts-wrapper">
+              ${getPostsCardsFromMetadata(postsMetadata)}
+            </div>
+          </section>
         </main>
       
         <blog-footer></blog-footer>

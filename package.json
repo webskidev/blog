@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/webskydev/blog#readme",
   "dependencies": {
+    "chalk": "^5.2.0",
     "highlight.js": "^11.7.0",
     "marked": "^4.2.4"
   }

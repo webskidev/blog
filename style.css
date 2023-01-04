@@ -8,8 +8,11 @@
   --font-color-primary: #0D0D0D;
   --font-color-secondary: #595959;
   --color-primary: #44AA71;
+  --color-primary-accent: hsl(146, 43%, 35%);
   --color-light-gray: #f5f5f5;
+  --color-gray: #dedede;
   --color-background: #ffffff;
+  --color-background-page: #fdfdfd;
 }
 
 html {
@@ -20,15 +23,16 @@ html {
 
 body {
   font-size: 1.6rem;
+  background: var(--color-background-page);
 }
 
 a {
   text-decoration: none;
-  color: var(--font-color-primary);
+  color: var(--color-primary);
 }
 
-a:hover {
-  color: var(--color-primary);
+a:hover, a:focus {
+  color: var(--color-primary-accent);
 }
 
 .hero {
@@ -65,7 +69,61 @@ a:hover {
   width: 90%;
 }
 
-.main {
-  padding: 1rem 4.8rem;
+.posts-header {
+  font-size: 3.6rem;
 }
 
+.posts {
+  padding: 0 4.8rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.posts-wrapper {
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-auto-flow: column;
+  gap: 2.4rem;
+}
+
+.post-card {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+  background: var(--color-background);
+  border-radius: 2.4rem;
+  padding: 2.4rem;
+  width: 35rem;
+  box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.08);
+}
+
+.post-image {
+  width: 100%;
+  border-radius: 2.4rem;
+  height: 20rem;
+  object-fit: cover;
+}
+
+.post-title {
+  font-size: 2rem;
+  text-decoration: none;
+  color: var(--color-primary);
+}
+
+.post-title:hover, .post-title:focus {
+  color: var(--color-primary-accent);
+}
+
+.post-date {
+  color: var(--font-color-secondary);
+  font-size: 1.4rem;
+}
+
+.post-description {
+  line-height: 1.4;
+}

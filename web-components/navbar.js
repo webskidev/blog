@@ -5,11 +5,11 @@ template.innerHTML = /* html */`
   <style>
     a {
       text-decoration: none;
-      color: var(--font-color-primary);
-    }
-    
-    a:hover {
       color: var(--color-primary);
+    }
+
+    a:hover, a:focus {
+      color: var(--color-primary-accent);
     }
 
     .logo {
@@ -39,7 +39,7 @@ template.innerHTML = /* html */`
   </style>
 
   <header class="navbar">
-    <a href="#" class="logo">webskydev</a>
+    <span class="logo">webskydev</span>
     <nav>
       <ul class="nav-links">
         <li><a href="">blog</a></li>

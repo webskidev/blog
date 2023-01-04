@@ -12,6 +12,7 @@ template.innerHTML = /* html */`
       border: 1px solid var(--color-primary);
       border-radius: 24px;
       color: var(--color-primary);
+      background: var(--color-background);
       letter-spacing: 0.5px;
       cursor: pointer;
       font-size: 1.8rem;
